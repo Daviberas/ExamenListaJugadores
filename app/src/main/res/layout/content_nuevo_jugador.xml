@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_nuevo_jugador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="es.iesnervion.dbenitez.examenlistajugadores.NuevoJugador"
+    tools:showIn="@layout/activity_nuevo_jugador">
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/txtNombre"
+        android:layout_alignBaseline="@id/txtNombre"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/silueta"
+        android:layout_below="@id/txtNombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        />
+
+        <RadioButton
+            android:id="@+id/base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/base"
+            android:textSize="20dp"
+            android:layout_below="@id/foto"
+            android:layout_marginTop="40dp"
+
+            />
+
+        <RadioButton
+            android:id="@+id/escolta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/escolta"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/foto"
+            android:layout_toRightOf="@id/base"
+            android:layout_marginLeft="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/alero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alero"
+            android:layout_marginTop="40dp"
+            android:textSize="20dp"
+            android:layout_below="@id/foto"
+            android:layout_toRightOf="@id/escolta"
+            android:layout_marginLeft="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/ala_pivot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ala_pivot"
+            android:textSize="20dp"
+            android:layout_below="@id/base"
+            />
+        <RadioButton
+            android:id="@+id/pivot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pivot"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/ala_pivot"
+            android:layout_below="@id/base"
+            android:layout_marginLeft="20dp"
+            />
+
+    <Spinner
+        android:id="@+id/spinnerAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ala_pivot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        />
+    <Spinner
+        android:id="@+id/spinnerPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerAltura"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>
